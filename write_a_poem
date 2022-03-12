@@ -1,0 +1,16 @@
+struct Road {} safety;
+struct Car { void drive() {} } car;
+struct Misbehavior {};
+struct Member { void cry() {} } family[2];
+int main() 
+{
+
+	Road roads[1000 * 10000];
+	roads[0] = safety;
+
+	try { car.drive(); }
+	catch (Misbehavior) 
+	{
+		for (auto member : family) member.cry();
+	}
+}
